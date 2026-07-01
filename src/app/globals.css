@@ -1,0 +1,279 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-playfair);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #090909;
+  --foreground: #e8e0d4;
+  --card: #121210;
+  --card-foreground: #e8e0d4;
+  --accent: #c8956c;
+  --accent-foreground: #090909;
+  --muted: #1a1916;
+  --muted-foreground: #6b6358;
+  --border: #2a2824;
+  --input: #2a2824;
+  --ring: #c8956c;
+  --green: #4a6741;
+  --green-light: #6b9a5e;
+  --copper: #c8956c;
+  --copper-light: #e0b48e;
+  --cream: #e8e0d4;
+  --dark: #090909;
+  --dark-card: #121210;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.portfolio-body {
+  background: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  cursor: none;
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+::selection {
+  background: #c8956c;
+  color: #090909;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090909;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2824;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c8956c;
+}
+
+/* Noise overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* Grain animation */
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  20% { transform: translate(-15%, 5%); }
+  30% { transform: translate(7%, -25%); }
+  40% { transform: translate(-5%, 25%); }
+  50% { transform: translate(-15%, 10%); }
+  60% { transform: translate(15%, 0%); }
+  70% { transform: translate(0%, 15%); }
+  80% { transform: translate(3%, 35%); }
+  90% { transform: translate(-10%, 10%); }
+}
+
+.noise-overlay::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200%;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")
+    repeat;
+  animation: grain 8s steps(10) infinite;
+  opacity: 0.5;
+}
+
+/* Magnetic button styles */
+.magnetic-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.magnetic-btn .btn-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--copper);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.magnetic-btn:hover .btn-bg {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Text reveal mask */
+.text-reveal-line {
+  overflow: hidden;
+  display: block;
+}
+
+.text-reveal-line span {
+  display: inline-block;
+  transform: translateY(100%);
+}
+
+/* Horizontal scroll section */
+.horizontal-scroll-section {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* Stagger children animation helper */
+.stagger-in > * {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 25s linear infinite;
+}
+
+/* Glow line */
+.glow-line {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #c8956c 50%,
+    transparent 100%
+  );
+  height: 1px;
+}
+
+/* Card tilt perspective */
+.tilt-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.tilt-card-inner {
+  transition: transform 0.15s ease-out;
+  transform-style: preserve-3d;
+}
+
+/* Experience dot pulse */
+@keyframes dot-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200, 149, 108, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(200, 149, 108, 0); }
+}
+
+.dot-pulse {
+  animation: dot-pulse 2s ease-in-out infinite;
+}
+
+/* Hero text gradient */
+.text-gradient-copper {
+  background: linear-gradient(135deg, #e8e0d4 0%, #c8956c 50%, #e0b48e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section divider */
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--copper);
+  opacity: 0.6;
+}
+
+/* Project card image overlay */
+.project-img-overlay {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(9, 9, 9, 0.3) 40%,
+    rgba(9, 9, 9, 0.9) 100%
+  );
+}
+
+/* Form focus glow */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #c8956c;
+  box-shadow: 0 0 0 3px rgba(200, 149, 108, 0.15);
+}
+
+/* Canvas overlay z-index */
+.canvas-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}

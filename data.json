@@ -1,0 +1,355 @@
+{
+  "site": {
+    "name": "Sameer Akhtar",
+    "logo": "SA",
+    "email": "Sameerxdev@gmail.com",
+    "copyright": "Sameer Akhtar. Crafted with care."
+  },
+  "navigation": {
+    "logoHref": "#hero",
+    "items": [
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Work",
+        "href": "#projects"
+      },
+      {
+        "label": "Skills",
+        "href": "#skills"
+      },
+      {
+        "label": "Experience",
+        "href": "#experience"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ],
+    "footerLinks": [
+      {
+        "label": "GitHub",
+        "href": "#"
+      },
+      {
+        "label": "Twitter",
+        "href": "#"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "#"
+      }
+    ]
+  },
+  "hero": {
+    "role": "MERN Stack Developer",
+    "firstName": "Sameer",
+    "lastName": "Akhtar",
+    "subtitle": "Computer Science graduate with hands-on MERN stack experience, building responsive web applications.",
+    "ctaText": "View Work",
+    "ctaHref": "#projects",
+    "scrollLabel": "Scroll"
+  },
+  "about": {
+    "sectionLabel": "About",
+    "heading": [
+      "Crafting digital",
+      "experiences that",
+      "leave a mark"
+    ],
+    "headingHighlight": "experiences",
+    "paragraphs": [
+      "Computer Science graduate with hands-on experience in MERN stack development and modern web technologies.",
+      "Currently working as a MERN Stack Developer Intern at AlphaSoft 360, building full-stack applications, REST APIs, and responsive user interfaces."
+    ],
+    "codeBlock": {
+      "lines": [
+        {
+          "keyword": "const",
+          "key": "name",
+          "value": "Sameer Akhtar"
+        },
+        {
+          "keyword": "const",
+          "key": "role",
+          "value": "MERN Stack Developer"
+        },
+        {
+          "keyword": "const",
+          "key": "passion",
+          "value": "Web Development"
+        },
+        {
+          "keyword": "const",
+          "key": "coffee",
+          "value": "Always"
+        },
+        {
+          "keyword": "const",
+          "key": "skills",
+          "value": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React JS",
+            "vue.js",
+            "Next.js",
+            "Redux",
+            "Tailwind CSS",
+            "MongoDB",
+            "MySql",
+            "Express",
+            "Node.js",
+            "Rest Api"
+          ],
+          "isArray": true
+        }
+      ],
+      "comment": "// Building the future, // one pixel at a time."
+    },
+    "stats": [
+      {
+        "number": "6",
+        "label": "Months Experience"
+      },
+      {
+        "number": "10",
+        "label": "Projects Delivered"
+      },
+      {
+        "number": "5",
+        "label": "Happy Clients"
+      }
+    ],
+    "imagePath": null
+  },
+  "marquee": {
+    "words": [
+      "JavaScript",
+      "vue.js",
+      "React",
+      "Next.js",
+      "Redux",
+      "Express.js",
+      "Node.js",
+      "MySql",
+      "MongoDB",
+      "Rest Api"
+    ]
+  },
+  "projects": {
+    "sectionLabel": "Selected Work",
+    "heading": "Projects that define me",
+    "headingHighlight": "define",
+    "endCtaText": "Let's Talk",
+    "endCtaHref": "#contact",
+    "items": [
+      {
+        "title": "Voyzora AI",
+        "category": "AI Trip Planner",
+        "description": "AI-powered trip planning platform with chatbot.",
+        "tags": [
+          "MongoDB",
+          "Express",
+          "React",
+          "Node"
+        ],
+        "color": "#888",
+        "year": "2026",
+        "link": "https://voyzora-ai.vercel.app/",
+        "imagePath": "/Voyzora.AI.png"
+      },
+      {
+        "title": "Foodify",
+        "category": "Restaurant Platform",
+        "description": "Food ordering platform with JWT auth, cart and admin dashboard.",
+        "tags": [
+          "MERN"
+        ],
+        "color": "#888",
+        "year": "2026",
+        "link": "https://floodify.vercel.app/",
+        "imagePath": "/Foodify.png"
+      },
+      {
+        "title": "LinkUp",
+        "category": "Professional Network",
+        "description": "LinkedIn-inspired networking platform.",
+        "tags": [
+          "MERN"
+        ],
+        "color": "#888",
+        "year": "2026",
+        "link": "https://linkupmedia.vercel.app/",
+        "imagePath": "/Linkup.png"
+      }
+    ]
+  },
+  "skills": {
+    "sectionLabel": "Expertise",
+    "heading": [
+      "Skills &",
+      "tools"
+    ],
+    "headingHighlight": "tools",
+    "toolsLabel": "Tools & Technologies",
+    "items": [
+      {
+        "name": "HTML",
+        "level": 95,
+        "category": "Frontend"
+      },
+      {
+        "name": "CSS",
+        "level": 93,
+        "category": "Frontend"
+      },
+      {
+        "name": "JavaScript",
+        "level": 92,
+        "category": "Frontend"
+      },
+      {
+        "name": "React JS",
+        "level": 95,
+        "category": "Frontend"
+      },
+      {
+        "name": "vue.js",
+        "level": 80,
+        "category": "Frontend"
+      },
+      {
+        "name": "Next.js",
+        "level": 90,
+        "category": "Frontend"
+      },
+      {
+        "name": "Redux",
+        "level": 85,
+        "category": "Frontend"
+      },
+      {
+        "name": "Tailwind CSS",
+        "level": 93,
+        "category": "Frontend"
+      },
+      {
+        "name": "MongoDB",
+        "level": 85,
+        "category": "Backend"
+      },
+      {
+        "name": "MySql",
+        "level": 80,
+        "category": "Backend"
+      },
+      {
+        "name": "Express",
+        "level": 85,
+        "category": "Backend"
+      },
+      {
+        "name": "Node.js",
+        "level": 85,
+        "category": "Backend"
+      },
+      {
+        "name": "Rest Api",
+        "level": 90,
+        "category": "Backend"
+      }
+    ],
+    "tools": [
+      "Git",
+      "GitHub",
+      "Postman",
+      "ClickUp",
+      "Jira",
+      "Claude",
+      "Cursor"
+    ]
+  },
+  "experience": {
+    "sectionLabel": "Journey",
+    "heading": [
+      "Experience &",
+      "education"
+    ],
+    "headingHighlight": "education",
+    "items": [
+      {
+        "year": "01/2026 \u2014 Present",
+        "role": "MERN Stack Developer Intern",
+        "company": "AlphaSoft 360",
+        "description": "Developing full-stack MERN applications, REST APIs, MongoDB integrations, and collaborating using Git, Jira and ClickUp.",
+        "type": "work"
+      },
+      {
+        "year": "2021 \u2014 2025",
+        "role": "Bachelor's in Computer Science",
+        "company": "Government College University Faisalabad",
+        "description": "Bachelor's degree in Computer Science.",
+        "type": "education"
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "Contact",
+    "heading": [
+      "Let's build",
+      "something",
+      "remarkable"
+    ],
+    "headingHighlight": "remarkable",
+    "description": "Have a project in mind or just want to say hello? I'm always open to discussing new opportunities, creative ideas, or partnerships. Drop me a message and I'll get back to you within 24 hours.",
+    "emailLabel": "Email",
+    "findMeLabel": "Find me on",
+    "formLabels": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project..."
+    },
+    "submitText": "Send Message",
+    "successText": "Message Sent",
+    "socials": [
+      {
+        "name": "GitHub",
+        "handle": "@Sameer-Builds",
+        "href": "https://github.com/Sameer-Builds"
+      },
+      {
+        "name": "Twitter",
+        "handle": "@Sameer",
+        "href": "#"
+      },
+      {
+        "name": "LinkedIn",
+        "handle": "Sameer Akhtar",
+        "href": "www.linkedin.com/in/sameer-akhtar-601349381"
+      },
+      {
+        "name": "Dribbble",
+        "handle": "@Sameer",
+        "href": "#"
+      }
+    ]
+  },
+  "footer": {
+    "ctaLabel": "Ready to collaborate?",
+    "heading": [
+      "Let's work",
+      "together"
+    ],
+    "headingHighlight": "together",
+    "ctaText": "Get in Touch",
+    "ctaHref": "mailto:[EMAIL_ADDRESS]",
+    "backToTopText": "Back to top"
+  }
+}
